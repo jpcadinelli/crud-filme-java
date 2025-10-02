@@ -18,9 +18,14 @@ public class FilmeController {
     public FilmeController ( FilmeModelInterface model) {this.model = model;}
 
     @GetMapping
-    public List<FilmeResponseDTO> listarTodos() {
-        return model.listarTodos();
+    public List<FilmeResponseDTO> listarTodos(
+            @RequestParam(required = false) String titulo,
+            @RequestParam(required = false) String diretor,
+            @RequestParam(required = false) Integer anoLancamento
+    ) {
+        return model.listarTodos(titulo, diretor, anoLancamento);
     }
+
 
     @GetMapping("/{id}")
     public ResponseEntity<FilmeResponseDTO> buscarPorId(@PathVariable Long id) {

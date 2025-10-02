@@ -21,11 +21,16 @@ public class FilmeService implements FilmeModelInterface {
         this.repository = repository;
     }
 
-    @Override public List<FilmeResponseDTO> listarTodos() {
+    @Override
+    public List<FilmeResponseDTO> listarTodos(String titulo, String diretor, Integer anoLancamento) {
         return repository.findAll().stream()
+                .filter(f -> titulo == null || f.getTitulo().toLowerCase().contains(titulo.toLowerCase()))
+                .filter(f -> diretor == null || f.getDiretor().toLowerCase().contains(diretor.toLowerCase()))
+                .filter(f -> anoLancamento == null || f.getAnoLancamento() == anoLancamento)
                 .map(f -> new FilmeResponseDTO(f.getId(), f.getTitulo(), f.getDiretor(), f.getAnoLancamento()))
                 .collect(Collectors.toList());
     }
+
 
     @Override public FilmeResponseDTO buscarPorId(Long id) {
         Filme filme = repository.findById(id)
