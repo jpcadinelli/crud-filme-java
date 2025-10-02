@@ -22,13 +22,16 @@ Este projeto é um **CRUD simples de filmes** em **Java com Spring Boot**, utili
 
 ### 1. Clonar o repositório
 ```bash
-git clone https://github.com/seu-usuario/filmes-api.git
-cd filmes-api
+git clone https://github.com/jpcadinelli/crud-filme-java
+cd crud-filme-java
 
 ### 2. Rodar a aplicação
 ```bash
 mvn spring-boot:run
 ```
+
+ou, utilize esta configuração no intelliJ
+![img.png](src/main/resources/static/img/configuracao-run-project.png)
 
 A aplicação subirá em:  
 👉 `http://localhost:8080/filmes`
@@ -42,6 +45,9 @@ Sempre que você adicionar novas dependências no `pom.xml`, rode:
 ```bash
 mvn clean install
 ```
+
+ou, utilize a configuração do intelliJ
+![img.png](src/main/resources/static/img/configuracao-run-clean-install-maven.png)
 
 ou, se quiser apenas compilar e atualizar o cache de libs:
 
