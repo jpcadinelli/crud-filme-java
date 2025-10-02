@@ -1,4 +1,4 @@
-package br.com.jpcadinelli.JavaFilmes.dto;
+package br.com.jpcadinelli.JavaFilmes.controller.dto;
 
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;

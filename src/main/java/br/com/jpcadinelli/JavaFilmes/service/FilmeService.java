@@ -1,8 +1,8 @@
 package br.com.jpcadinelli.JavaFilmes.service;
 
 import br.com.jpcadinelli.JavaFilmes.controller.FilmeModelInterface;
-import br.com.jpcadinelli.JavaFilmes.dto.FilmeRequestDTO;
-import br.com.jpcadinelli.JavaFilmes.dto.FilmeResponseDTO;
+import br.com.jpcadinelli.JavaFilmes.controller.dto.FilmeRequestDTO;
+import br.com.jpcadinelli.JavaFilmes.controller.dto.FilmeResponseDTO;
 import br.com.jpcadinelli.JavaFilmes.model.Filme;
 import br.com.jpcadinelli.JavaFilmes.repository.FilmeRepository;
 import org.springframework.context.annotation.Primary;

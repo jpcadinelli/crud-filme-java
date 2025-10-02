@@ -1,4 +1,4 @@
-package br.com.jpcadinelli.JavaFilmes.dto;
+package br.com.jpcadinelli.JavaFilmes.controller.dto;
 
 public class FilmeResponseDTO {
     private Long id;
